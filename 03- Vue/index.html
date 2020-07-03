@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn Vue</title>
+	<script src="vue.js">
+	</script>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="(food, i) in foods">
+				{{ food }} ({{ i }})
+			</li>
+		</ul>
+		<button @click="foods.push('salt', 'water', 'cigkofte')">
+			Add more!
+		</button>
+		<hr>
+		<ul>
+			<li v-for="person in persons">
+				<span v-for="value in person">
+					{{ value }}
+				</span>
+			</li>
+		</ul>
+	</div>
+<script src="app.js">
+</script>
+</body>
+</html>
+
